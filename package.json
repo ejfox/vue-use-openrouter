@@ -42,7 +42,10 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
     "@nuxtjs/eslint-config-typescript": "latest",
+    "@release-it/conventional-changelog": "^9.0.3",
     "@vitejs/plugin-vue": "^3.0.3",
     "c8": "latest",
     "eslint": "latest",
