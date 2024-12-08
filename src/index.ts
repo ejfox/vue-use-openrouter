@@ -1,6 +1,5 @@
-import { ref, computed, watch, readonly, onMounted, onUnmounted } from "vue";
-import type { Ref, ComputedRef } from "vue";
-import type { MaybeRef } from "@vueuse/shared";
+import { ref, computed, watch, readonly, onMounted, onUnmounted } from 'vue'
+import type { Ref, ComputedRef } from 'vue'
 
 /**
  * Options for chat API requests
@@ -16,7 +15,7 @@ export interface ChatOptions {
  * A chat message with role and content
  */
 export interface ChatMessage {
-  role: "user" | "assistant" | "system";
+  role: 'user' | 'assistant' | 'system';
   content: string;
 }
 
@@ -129,12 +128,13 @@ export interface UseOpenRouterReturn {
 /**
  * Validates and normalizes temperature value
  */
-function normalizeTemperature(value: number): number {
-  if (typeof value !== "number") {
-    console.warn("[useOpenRouter] temperature should be a number");
-    return 0.7;
+function normalizeTemperature (value: number): number {
+  if (typeof value !== 'number') {
+    // eslint-disable-next-line no-console
+    console.warn('[useOpenRouter] temperature should be a number')
+    return 0.7
   }
-  return Math.max(0, Math.min(1, value)); // Clamp between 0-1
+  return Math.max(0, Math.min(1, value)) // Clamp between 0-1
 }
 
 /**
@@ -193,49 +193,49 @@ export interface OpenRouterOptions {
  * console.log(`Tokens used: ${chat.chatStats.value.tokens}`)
  * ```
  */
-export function useOpenRouter(
+export function useOpenRouter (
   options: OpenRouterOptions = {}
 ): UseOpenRouterReturn {
   const {
-    apiKey: initialApiKey = "",
+    apiKey: initialApiKey = '',
     temperature: initialTemp = 0.7,
-    defaultModel = "anthropic/claude-3-sonnet:beta",
+    defaultModel = 'anthropic/claude-3-sonnet:beta',
     enabledModels: initialEnabledModels = [
-      "anthropic/claude-3-sonnet:beta",
-      "anthropic/claude-2.1",
-      "openai/gpt-4-turbo",
-      "openai/gpt-3.5-turbo",
-    ],
-  } = options;
+      'anthropic/claude-3-sonnet:beta',
+      'anthropic/claude-2.1',
+      'openai/gpt-4-turbo',
+      'openai/gpt-3.5-turbo'
+    ]
+  } = options
 
-  const apiKey = ref(initialApiKey);
-  const messages = ref<ChatMessage[]>([]);
-  const isLoading = ref(false);
-  const error = ref<string | null>(null);
-  const currentModel = ref(defaultModel);
-  const currentChatId = ref<string | null>(null);
+  const apiKey = ref(initialApiKey)
+  const messages = ref<ChatMessage[]>([])
+  const isLoading = ref(false)
+  const error = ref<string | null>(null)
+  const currentModel = ref(defaultModel)
+  const currentChatId = ref<string | null>(null)
   const chatStats = ref<ChatStats>({
     tokens: 0,
     cost: 0,
     promptTokens: 0,
     completionTokens: 0,
-    totalCost: 0,
-  });
-  const temperature = ref(normalizeTemperature(initialTemp));
-  const availableModels = ref<OpenRouterModel[]>([]);
-  const recentModelIds = ref<string[]>([]);
+    totalCost: 0
+  })
+  const temperature = ref(normalizeTemperature(initialTemp))
+  const availableModels = ref<OpenRouterModel[]>([])
+  const recentModelIds = ref<string[]>([])
 
   // Default enabled models
-  const enabledModelIds = ref<string[]>(initialEnabledModels);
+  const enabledModelIds = ref<string[]>(initialEnabledModels)
 
   const modelName = computed(() => {
     const model = availableModels.value.find(
       (m: OpenRouterModel) => m.id === currentModel.value
-    );
-    return model?.name || currentModel.value;
-  });
+    )
+    return model?.name || currentModel.value
+  })
 
-  const hasValidKey = computed(() => apiKey.value.length > 0);
+  const hasValidKey = computed(() => apiKey.value.length > 0)
 
   /**
    * Gets the cost per million tokens for a specific model
@@ -262,15 +262,15 @@ export function useOpenRouter(
    * @param modelId - The model to check pricing for
    * @returns Cost per million tokens (in USD)
    */
-  function getModelCost(modelId: string): number {
-    const model = availableModels.value.find((m) => m.id === modelId);
+  function getModelCost (modelId: string): number {
+    const model = availableModels.value.find(m => m.id === modelId)
     if (!model) {
-      return 0;
+      return 0
     }
     // Average of prompt and completion cost per 1M tokens
-    const promptCost = model.pricing.prompt || 0;
-    const completionCost = model.pricing.completion || 0;
-    return (promptCost + completionCost) / 2;
+    const promptCost = model.pricing.prompt || 0
+    const completionCost = model.pricing.completion || 0
+    return (promptCost + completionCost) / 2
   }
 
   /**
@@ -303,55 +303,55 @@ export function useOpenRouter(
    * @param rawCost - Optional override cost to format
    * @returns Formatted cost string with dollar sign
    */
-  function formatModelCost(modelId: string, rawCost?: number): string {
-    const cost = rawCost ?? getModelCost(modelId);
+  function formatModelCost (modelId: string, rawCost?: number): string {
+    const cost = rawCost ?? getModelCost(modelId)
     if (cost === 0) {
-      return "$0.00";
+      return '$0.00'
     }
 
     // For very small numbers (less than 0.01)
     if (cost < 0.01) {
-      return `$${cost.toFixed(5)}`;
+      return `$${cost.toFixed(5)}`
     }
 
     // For small numbers (less than 0.1)
     if (cost < 0.1) {
-      return `$${cost.toFixed(4)}`;
+      return `$${cost.toFixed(4)}`
     }
 
     // For numbers less than 1
     if (cost < 1) {
-      return `$${cost.toFixed(3)}`;
+      return `$${cost.toFixed(3)}`
     }
 
     // For regular numbers
-    return `$${cost.toFixed(2)}`;
+    return `$${cost.toFixed(2)}`
   }
 
   /**
    * Fetches available models from the OpenRouter API
    * @throws {Error} If API key is invalid or request fails
    */
-  async function fetchAvailableModels() {
+  async function fetchAvailableModels () {
     if (!hasValidKey.value) {
-      throw new Error("[useOpenRouter] API key is required to fetch models");
+      throw new Error('[useOpenRouter] API key is required to fetch models')
     }
 
-    error.value = null;
+    error.value = null
 
     try {
-      const response = await fetch("https://openrouter.ai/api/v1/models", {
-        method: "GET",
+      const response = await fetch('https://openrouter.ai/api/v1/models', {
+        method: 'GET',
         headers: {
-          Authorization: `Bearer ${apiKey.value}`,
-        },
-      });
+          Authorization: `Bearer ${apiKey.value}`
+        }
+      })
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
-      const data = await response.json();
+      const data = await response.json()
       availableModels.value = data.data.map((model: OpenRouterModel) => ({
         id: model.id,
         name: model.name,
@@ -359,14 +359,14 @@ export function useOpenRouter(
         context_length: model.context_length,
         pricing: {
           prompt: model.pricing.prompt,
-          completion: model.pricing.completion,
-        },
-      }));
+          completion: model.pricing.completion
+        }
+      }))
     } catch (err) {
       error.value =
-        err instanceof Error ? err.message : "Failed to fetch models";
-      availableModels.value = [];
-      throw err;
+        err instanceof Error ? err.message : 'Failed to fetch models'
+      availableModels.value = []
+      throw err
     }
   }
 
@@ -384,30 +384,30 @@ export function useOpenRouter(
    *
    * @param modelId - The OpenRouter model identifier to track
    */
-  function trackModelUsage(modelId: string) {
+  function trackModelUsage (modelId: string) {
     recentModelIds.value = [
       modelId,
-      ...recentModelIds.value.filter((id) => id !== modelId),
-    ].slice(0, 10);
+      ...recentModelIds.value.filter(id => id !== modelId)
+    ].slice(0, 10)
   }
 
   // Get recent models
   const recentModels = computed(() => {
     return recentModelIds.value
-      .map((id) =>
+      .map(id =>
         availableModels.value.find((m: OpenRouterModel) => m.id === id)
       )
-      .filter((m): m is OpenRouterModel => m !== undefined);
-  });
+      .filter((m): m is OpenRouterModel => m !== undefined)
+  })
 
   // Watch for API key changes to fetch models
   watch(apiKey, async (newKey) => {
     if (newKey) {
-      await fetchAvailableModels();
+      await fetchAvailableModels()
     } else {
-      availableModels.value = [];
+      availableModels.value = []
     }
-  });
+  })
 
   /**
    * Sets the OpenRouter API key
@@ -422,14 +422,14 @@ export function useOpenRouter(
    *
    * @param key - The OpenRouter API key
    */
-  function setApiKey(key: string): void {
-    apiKey.value = key;
+  function setApiKey (key: string): void {
+    apiKey.value = key
   }
 
   // Set current model
-  function setModel(modelId: string) {
+  function setModel (modelId: string) {
     if (availableModels.value.find((m: OpenRouterModel) => m.id === modelId)) {
-      currentModel.value = modelId;
+      currentModel.value = modelId
     }
   }
 
@@ -440,77 +440,77 @@ export function useOpenRouter(
         enabledModelIds.value.includes(model.id)
       )
       .sort((a: OpenRouterModel, b: OpenRouterModel) => {
-        const costA = (a.pricing.prompt + a.pricing.completion) / 2;
-        const costB = (b.pricing.prompt + b.pricing.completion) / 2;
+        const costA = (a.pricing.prompt + a.pricing.completion) / 2
+        const costB = (b.pricing.prompt + b.pricing.completion) / 2
         // Free models go to the bottom
         if (costA === 0 && costB !== 0) {
-          return 1;
+          return 1
         }
         if (costB === 0 && costA !== 0) {
-          return -1;
+          return -1
         }
-        return costB - costA;
-      });
-  });
+        return costB - costA
+      })
+  })
 
   /**
    * Sends a message to the AI and waits for its response
    *
    * @throws {Error} If the API request fails
    */
-  async function sendMessage(content: string) {
+  async function sendMessage (content: string) {
     if (!hasValidKey.value) {
-      throw new Error("API key is required");
+      throw new Error('API key is required')
     }
 
     if (!content.trim()) {
-      throw new Error("Message content cannot be empty");
+      throw new Error('Message content cannot be empty')
     }
 
-    isLoading.value = true;
-    error.value = null;
+    isLoading.value = true
+    error.value = null
 
     try {
-      const userMessage: ChatMessage = { role: "user", content };
-      messages.value.push(userMessage);
+      const userMessage: ChatMessage = { role: 'user', content }
+      messages.value.push(userMessage)
 
       const response = await fetch(
-        "https://openrouter.ai/api/v1/chat/completions",
+        'https://openrouter.ai/api/v1/chat/completions',
         {
-          method: "POST",
+          method: 'POST',
           headers: {
             Authorization: `Bearer ${apiKey.value}`,
-            "Content-Type": "application/json",
-            "HTTP-Referer": window.location.origin,
+            'Content-Type': 'application/json',
+            'HTTP-Referer': window.location.origin
           },
           body: JSON.stringify({
             model: currentModel.value,
             messages: messages.value,
             temperature: temperature.value,
-            max_tokens: 4096, // Reasonable default
-          }),
+            max_tokens: 4096 // Reasonable default
+          })
         }
-      );
+      )
 
       if (!response.ok) {
-        const errorData = (await response.json()) as OpenRouterError;
+        const errorData = (await response.json()) as OpenRouterError
         throw new Error(
           errorData.error?.message || `API error: ${response.status}`
-        );
+        )
       }
 
-      const data = (await response.json()) as ChatResponse;
+      const data = (await response.json()) as ChatResponse
 
       if (!data.choices?.[0]?.message) {
-        throw new Error("Invalid response from API");
+        throw new Error('Invalid response from API')
       }
 
       const assistantMessage: ChatMessage = {
-        role: "assistant",
-        content: data.choices[0].message.content,
-      };
+        role: 'assistant',
+        content: data.choices[0].message.content
+      }
 
-      messages.value.push(assistantMessage);
+      messages.value.push(assistantMessage)
 
       // Update stats with proper type checking
       chatStats.value = {
@@ -518,15 +518,16 @@ export function useOpenRouter(
         promptTokens: data.usage?.prompt_tokens || 0,
         completionTokens: data.usage?.completion_tokens || 0,
         cost: chatStats.value.cost + (data.usage?.total_cost || 0),
-        totalCost: chatStats.value.totalCost + (data.usage?.total_cost || 0),
-      };
+        totalCost: chatStats.value.totalCost + (data.usage?.total_cost || 0)
+      }
     } catch (err) {
       error.value =
-        err instanceof Error ? err.message : "Failed to send message";
-      console.error("Send message error:", err);
-      throw err; // Re-throw to allow caller to handle
+        err instanceof Error ? err.message : 'Failed to send message'
+      // eslint-disable-next-line no-console
+      console.error('Send message error:', err)
+      throw err // Re-throw to allow caller to handle
     } finally {
-      isLoading.value = false;
+      isLoading.value = false
     }
   }
 
@@ -561,16 +562,16 @@ export function useOpenRouter(
    * console.log(chat.chatStats.value.cost) // 0
    * ```
    */
-  function clearChat() {
-    messages.value = [];
-    currentChatId.value = null;
+  function clearChat () {
+    messages.value = []
+    currentChatId.value = null
     chatStats.value = {
       tokens: 0,
       cost: 0,
       promptTokens: 0,
       completionTokens: 0,
-      totalCost: 0,
-    };
+      totalCost: 0
+    }
   }
 
   /**
@@ -608,47 +609,36 @@ export function useOpenRouter(
    *
    * @param value - Temperature between 0.0 and 1.0
    */
-  function updateTemperature(value: number) {
-    temperature.value = normalizeTemperature(value);
+  function updateTemperature (value: number) {
+    temperature.value = normalizeTemperature(value)
   }
 
   // Only fetch models on client-side
   onMounted(() => {
     if (hasValidKey.value) {
-      fetchAvailableModels();
+      fetchAvailableModels()
     }
-  });
-
-  // Use window safely
-  const origin = typeof window !== "undefined" ? window.location.origin : "";
+  })
 
   // Cleanup on unmount
   onUnmounted(() => {
-    messages.value = [];
-    error.value = null;
-    availableModels.value = [];
-  });
+    messages.value = []
+    error.value = null
+    availableModels.value = []
+  })
 
   // Stop watching when component unmounts
   const stopWatch = watch(apiKey, async (newKey) => {
     if (newKey) {
-      await fetchAvailableModels();
+      await fetchAvailableModels()
     } else {
-      availableModels.value = [];
+      availableModels.value = []
     }
-  });
+  })
 
   onUnmounted(() => {
-    stopWatch();
-  });
-
-  const isDev = process.env.NODE_ENV === "development";
-
-  function debug(...args: any[]) {
-    if (isDev) {
-      console.log("[useOpenRouter]", ...args);
-    }
-  }
+    stopWatch()
+  })
 
   return {
     apiKey,
@@ -672,6 +662,6 @@ export function useOpenRouter(
     chatStats,
     temperature,
     updateTemperature,
-    sendMessage,
-  };
+    sendMessage
+  }
 }
