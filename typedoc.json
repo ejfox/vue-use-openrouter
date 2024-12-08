@@ -1,0 +1,22 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["./src/index.ts"],
+  "out": "docs",
+  "plugin": ["typedoc-plugin-markdown"],
+  "theme": "markdown",
+  "readme": "none",
+  "name": "useOpenRouter API Documentation",
+  "includeVersion": true,
+  "hideGenerator": true,
+  "githubPages": true,
+  "cleanOutputDir": true,
+  "skipErrorChecking": true,
+  "excludeExternals": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeInternal": true,
+  "validation": {
+    "invalidLink": true,
+    "notExported": true
+  }
+} 

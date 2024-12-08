@@ -25,7 +25,11 @@
     "lint": "eslint --ext .ts,.js,.mjs,.cjs .",
     "prepack": "unbuild",
     "release": "yarn test && standard-version && git push --follow-tags && pnpm publish",
-    "test": "yarn lint && vitest run"
+    "test": "yarn lint && vitest run",
+    "docs": "typedoc",
+    "docs:watch": "typedoc --watch",
+    "predeploy": "npm run docs",
+    "deploy": "gh-pages -d docs"
   },
   "dependencies": {},
   "devDependencies": {
@@ -34,6 +38,8 @@
     "c8": "latest",
     "eslint": "latest",
     "standard-version": "latest",
+    "typedoc": "^0.27.3",
+    "typedoc-plugin-markdown": "^4.3.1",
     "typescript": "latest",
     "unbuild": "latest",
     "vite": "^3.0.7",
