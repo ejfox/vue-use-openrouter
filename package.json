@@ -1,8 +1,8 @@
 {
-  "name": "use-openrouter",
-  "version": "0.1.0",
+  "name": "vue-use-openrouter",
+  "version": "0.0.1",
   "description": "A Vue 3 composable for interacting with OpenRouter's AI models API",
-  "repository": "ejfox/use-openrouter",
+  "repository": "ejfox/vue-use-openrouter",
   "author": "EJ Fox <ejfox@ejfox.com>",
   "license": "MIT",
   "keywords": [
