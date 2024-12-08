@@ -1,10 +1,19 @@
 {
-  "name": "vue-composable-template",
-  "version": "1.0.0",
-  "description": "A simple and minimalistic setup for creating Vue 3 composables.",
-  "repository": "Intevel/vue-composable-template",
-  "author": "Conner Bachmann <github@conner-bachmann.de>",
+  "name": "use-openrouter",
+  "version": "0.1.0",
+  "description": "A Vue 3 composable for interacting with OpenRouter's AI models API",
+  "repository": "ejfox/use-openrouter",
+  "author": "EJ Fox <ejfox@ejfox.com>",
   "license": "MIT",
+  "keywords": [
+    "vue",
+    "composable",
+    "openrouter",
+    "ai",
+    "chat",
+    "gpt",
+    "claude"
+  ],
   "sideEffects": false,
   "type": "module",
   "exports": {
@@ -24,7 +33,7 @@
     "dev": "vite playground",
     "lint": "eslint --ext .ts,.js,.mjs,.cjs .",
     "prepack": "unbuild",
-    "release": "yarn test && standard-version && git push --follow-tags && pnpm publish",
+    "release": "release-it",
     "test": "yarn lint && vitest run",
     "docs": "typedoc",
     "docs:watch": "typedoc --watch",
@@ -45,5 +54,11 @@
     "vite": "^3.0.7",
     "vitest": "latest",
     "vue": "^3.2.37"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }

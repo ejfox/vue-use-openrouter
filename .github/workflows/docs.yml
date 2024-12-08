@@ -1,4 +1,4 @@
-name: Deploy Documentation
+name: Validate Documentation
 
 on:
   push:
@@ -6,12 +6,11 @@ on:
       - main
     paths:
       - 'src/**'
-      - 'docs/**'
       - 'typedoc.json'
       - '.github/workflows/docs.yml'
 
 jobs:
-  deploy:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -24,12 +23,11 @@ jobs:
       - name: Install dependencies
         run: yarn install
         
-      - name: Generate documentation
-        run: yarn docs
-        
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
-          force_orphan: true 
+      - name: Generate and check documentation
+        run: |
+          yarn docs
+          if [ -n "$(git status --porcelain docs/)" ]; then
+            echo "⚠️ Documentation is out of sync with source code"
+            echo "Please run 'yarn docs' locally and commit the changes"
+            exit 1
+          fi
