@@ -1,4 +1,4 @@
-[**useOpenRouter API Documentation v0.1.0**](../README.md)
+[**useOpenRouter API Documentation v0.0.2**](../README.md)
 
 ***
 
@@ -24,7 +24,7 @@ Initial API key
 
 #### Defined in
 
-[index.ts:148](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L148)
+[index.ts:148](https://github.com/ejfox/vue-use-openrouter/blob/ca594a649d26948288e93486a1640ac59c89695e/src/index.ts#L148)
 
 ***
 
@@ -42,7 +42,7 @@ Default model to use
 
 #### Defined in
 
-[index.ts:160](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L160)
+[index.ts:160](https://github.com/ejfox/vue-use-openrouter/blob/ca594a649d26948288e93486a1640ac59c89695e/src/index.ts#L160)
 
 ***
 
@@ -54,7 +54,7 @@ List of enabled model IDs
 
 #### Defined in
 
-[index.ts:165](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L165)
+[index.ts:165](https://github.com/ejfox/vue-use-openrouter/blob/ca594a649d26948288e93486a1640ac59c89695e/src/index.ts#L165)
 
 ***
 
@@ -72,4 +72,4 @@ Initial temperature setting
 
 #### Defined in
 
-[index.ts:154](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L154)
+[index.ts:154](https://github.com/ejfox/vue-use-openrouter/blob/ca594a649d26948288e93486a1640ac59c89695e/src/index.ts#L154)

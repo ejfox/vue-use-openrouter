@@ -1,4 +1,4 @@
-[**useOpenRouter API Documentation v0.1.0**](../README.md)
+[**useOpenRouter API Documentation v0.0.2**](../README.md)
 
 ***
 
@@ -28,7 +28,7 @@ Response from the OpenRouter API
 
 #### Defined in
 
-[index.ts:27](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L27)
+[index.ts:26](https://github.com/ejfox/vue-use-openrouter/blob/ca594a649d26948288e93486a1640ac59c89695e/src/index.ts#L26)
 
 ***
 
@@ -38,7 +38,7 @@ Response from the OpenRouter API
 
 #### Defined in
 
-[index.ts:34](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L34)
+[index.ts:33](https://github.com/ejfox/vue-use-openrouter/blob/ca594a649d26948288e93486a1640ac59c89695e/src/index.ts#L33)
 
 ***
 
@@ -48,7 +48,7 @@ Response from the OpenRouter API
 
 #### Defined in
 
-[index.ts:33](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L33)
+[index.ts:32](https://github.com/ejfox/vue-use-openrouter/blob/ca594a649d26948288e93486a1640ac59c89695e/src/index.ts#L32)
 
 ***
 
@@ -74,4 +74,4 @@ Response from the OpenRouter API
 
 #### Defined in
 
-[index.ts:35](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L35)
+[index.ts:34](https://github.com/ejfox/vue-use-openrouter/blob/ca594a649d26948288e93486a1640ac59c89695e/src/index.ts#L34)
