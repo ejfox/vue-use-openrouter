@@ -1,4 +1,4 @@
-[**useOpenRouter API Documentation v1.0.0**](../README.md)
+[**useOpenRouter API Documentation v0.1.0**](../README.md)
 
 ***
 
@@ -16,7 +16,7 @@ Options for chat API requests
 
 #### Defined in
 
-[index.ts:12](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L12)
+[index.ts:12](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L12)
 
 ***
 
@@ -26,7 +26,7 @@ Options for chat API requests
 
 #### Defined in
 
-[index.ts:9](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L9)
+[index.ts:9](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L9)
 
 ***
 
@@ -36,7 +36,7 @@ Options for chat API requests
 
 #### Defined in
 
-[index.ts:10](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L10)
+[index.ts:10](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L10)
 
 ***
 
@@ -46,4 +46,4 @@ Options for chat API requests
 
 #### Defined in
 
-[index.ts:11](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L11)
+[index.ts:11](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L11)

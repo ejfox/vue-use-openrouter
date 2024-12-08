@@ -1,8 +1,8 @@
-**useOpenRouter API Documentation v1.0.0**
+**useOpenRouter API Documentation v0.1.0**
 
 ***
 
-# useOpenRouter API Documentation v1.0.0
+# useOpenRouter API Documentation v0.1.0
 
 ## Interfaces
 

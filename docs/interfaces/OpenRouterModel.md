@@ -1,4 +1,4 @@
-[**useOpenRouter API Documentation v1.0.0**](../README.md)
+[**useOpenRouter API Documentation v0.1.0**](../README.md)
 
 ***
 
@@ -16,7 +16,7 @@ Model information from OpenRouter
 
 #### Defined in
 
-[index.ts:50](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L50)
+[index.ts:50](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L50)
 
 ***
 
@@ -26,7 +26,7 @@ Model information from OpenRouter
 
 #### Defined in
 
-[index.ts:49](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L49)
+[index.ts:49](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L49)
 
 ***
 
@@ -36,7 +36,7 @@ Model information from OpenRouter
 
 #### Defined in
 
-[index.ts:47](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L47)
+[index.ts:47](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L47)
 
 ***
 
@@ -46,7 +46,7 @@ Model information from OpenRouter
 
 #### Defined in
 
-[index.ts:48](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L48)
+[index.ts:48](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L48)
 
 ***
 
@@ -64,4 +64,4 @@ Model information from OpenRouter
 
 #### Defined in
 
-[index.ts:51](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L51)
+[index.ts:51](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L51)

@@ -1,4 +1,4 @@
-[**useOpenRouter API Documentation v1.0.0**](../README.md)
+[**useOpenRouter API Documentation v0.1.0**](../README.md)
 
 ***
 
@@ -16,7 +16,7 @@ A chat message with role and content
 
 #### Defined in
 
-[index.ts:20](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L20)
+[index.ts:20](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L20)
 
 ***
 
@@ -26,4 +26,4 @@ A chat message with role and content
 
 #### Defined in
 
-[index.ts:19](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L19)
+[index.ts:19](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L19)

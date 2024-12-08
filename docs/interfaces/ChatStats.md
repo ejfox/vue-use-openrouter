@@ -1,4 +1,4 @@
-[**useOpenRouter API Documentation v1.0.0**](../README.md)
+[**useOpenRouter API Documentation v0.1.0**](../README.md)
 
 ***
 
@@ -16,7 +16,7 @@ Statistics for the current chat session
 
 #### Defined in
 
-[index.ts:64](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L64)
+[index.ts:64](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L64)
 
 ***
 
@@ -26,7 +26,7 @@ Statistics for the current chat session
 
 #### Defined in
 
-[index.ts:62](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L62)
+[index.ts:62](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L62)
 
 ***
 
@@ -36,7 +36,7 @@ Statistics for the current chat session
 
 #### Defined in
 
-[index.ts:63](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L63)
+[index.ts:63](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L63)
 
 ***
 
@@ -46,7 +46,7 @@ Statistics for the current chat session
 
 #### Defined in
 
-[index.ts:61](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L61)
+[index.ts:61](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L61)
 
 ***
 
@@ -56,4 +56,4 @@ Statistics for the current chat session
 
 #### Defined in
 
-[index.ts:65](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L65)
+[index.ts:65](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L65)

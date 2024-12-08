@@ -1,4 +1,4 @@
-[**useOpenRouter API Documentation v1.0.0**](../README.md)
+[**useOpenRouter API Documentation v0.1.0**](../README.md)
 
 ***
 
@@ -16,7 +16,7 @@ Current API key
 
 #### Defined in
 
-[index.ts:84](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L84)
+[index.ts:84](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L84)
 
 ***
 
@@ -28,7 +28,7 @@ List of all available models
 
 #### Defined in
 
-[index.ts:100](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L100)
+[index.ts:100](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L100)
 
 ***
 
@@ -40,7 +40,7 @@ Chat statistics
 
 #### Defined in
 
-[index.ts:120](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L120)
+[index.ts:120](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L120)
 
 ***
 
@@ -56,7 +56,7 @@ Clear chat history
 
 #### Defined in
 
-[index.ts:118](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L118)
+[index.ts:118](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L118)
 
 ***
 
@@ -68,7 +68,7 @@ Current chat ID
 
 #### Defined in
 
-[index.ts:116](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L116)
+[index.ts:116](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L116)
 
 ***
 
@@ -80,7 +80,7 @@ Current model ID
 
 #### Defined in
 
-[index.ts:96](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L96)
+[index.ts:96](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L96)
 
 ***
 
@@ -92,7 +92,7 @@ List of enabled models
 
 #### Defined in
 
-[index.ts:102](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L102)
+[index.ts:102](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L102)
 
 ***
 
@@ -104,7 +104,7 @@ Error state
 
 #### Defined in
 
-[index.ts:94](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L94)
+[index.ts:94](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L94)
 
 ***
 
@@ -120,7 +120,7 @@ Fetch available models
 
 #### Defined in
 
-[index.ts:108](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L108)
+[index.ts:108](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L108)
 
 ***
 
@@ -146,7 +146,7 @@ Format model cost
 
 #### Defined in
 
-[index.ts:112](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L112)
+[index.ts:112](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L112)
 
 ***
 
@@ -168,7 +168,7 @@ Get model cost
 
 #### Defined in
 
-[index.ts:110](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L110)
+[index.ts:110](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L110)
 
 ***
 
@@ -180,7 +180,7 @@ Whether the current API key is valid
 
 #### Defined in
 
-[index.ts:88](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L88)
+[index.ts:88](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L88)
 
 ***
 
@@ -192,7 +192,7 @@ Loading state
 
 #### Defined in
 
-[index.ts:92](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L92)
+[index.ts:92](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L92)
 
 ***
 
@@ -204,7 +204,7 @@ List of messages in the current conversation
 
 #### Defined in
 
-[index.ts:90](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L90)
+[index.ts:90](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L90)
 
 ***
 
@@ -216,7 +216,7 @@ Current model display name
 
 #### Defined in
 
-[index.ts:98](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L98)
+[index.ts:98](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L98)
 
 ***
 
@@ -228,7 +228,7 @@ Recently used models
 
 #### Defined in
 
-[index.ts:104](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L104)
+[index.ts:104](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L104)
 
 ***
 
@@ -250,7 +250,7 @@ Send a message
 
 #### Defined in
 
-[index.ts:126](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L126)
+[index.ts:126](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L126)
 
 ***
 
@@ -272,7 +272,7 @@ Set the API key
 
 #### Defined in
 
-[index.ts:86](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L86)
+[index.ts:86](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L86)
 
 ***
 
@@ -294,7 +294,7 @@ Set current model
 
 #### Defined in
 
-[index.ts:114](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L114)
+[index.ts:114](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L114)
 
 ***
 
@@ -306,7 +306,7 @@ Temperature setting
 
 #### Defined in
 
-[index.ts:122](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L122)
+[index.ts:122](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L122)
 
 ***
 
@@ -328,7 +328,7 @@ Track model usage
 
 #### Defined in
 
-[index.ts:106](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L106)
+[index.ts:106](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L106)
 
 ***
 
@@ -350,4 +350,4 @@ Update temperature
 
 #### Defined in
 
-[index.ts:124](https://github.com/ejfox/vue-use-openrouter/blob/1d2f24340e5b0fd0067f19fb73e1272c7e16cc66/src/index.ts#L124)
+[index.ts:124](https://github.com/ejfox/vue-use-openrouter/blob/e3bdbf97dbd72ec6c31741ce2bd3ff73ff7034d6/src/index.ts#L124)
